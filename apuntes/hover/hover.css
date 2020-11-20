@@ -1,0 +1,108 @@
+/* Este pen está con Normalize 
+   para quitar el estilo por defecto a los botones.
+*/
+
+/* Common properties to all buttons */
+button {
+  --btn-hpadding: 1em;
+  font-size: 30px;
+  border: 0;
+  padding: .5em var(--btn-hpadding);
+  margin: 5px;
+  background-color: #999;
+  transition: all .1s linear;
+}
+button:hover {
+  background-color: tomato;
+}
+
+/* BOTÓN 2 */
+.b2::after {
+  content: '\f054';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-left: .5em;
+  display: none;
+}
+.b2:hover::after {
+  display: inline;
+}
+
+/* BOTÓN 3 */
+.b3::after {
+  content: '\f054';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  display: inline-block;
+  width: 0px;
+  opacity: 0;
+  transition: all .1s linear;
+}
+.b3:hover::after {
+  width: .5em;
+  margin-left: .5em;
+  opacity: 1;
+}
+
+/* BOTÓN 4 */
+.b4 {
+  --trans-distance: .5em;
+  position: relative; /* Para el hijo after con pos absoluta */
+}
+.b4 > .content {
+  transition: margin .1s linear; /* Para los márgenes */
+}
+.b4:hover > .content {
+  margin-left: calc(-1 * var(--trans-distance)); /* Mueve el texto a la izda */
+  margin-right: var(--trans-distance); /* Para que el botón mantenga el ancho */
+}
+.b4::after {
+  content: '\f054'; /* Icono de flecha abierta */
+  font-weight: 900;  /* Sólo funciona con este tamaño */
+  font-family: 'Font Awesome 5 Free';
+  display: inline-block;
+  width: var(--trans-distance);
+  opacity: 0;
+  position: absolute;
+  transition: all .1s linear;
+  
+  margin-left: calc(-1 * var(--trans-distance));
+}
+.b4:hover::after {
+  margin-left: 0;
+  opacity: 1;
+}
+
+
+
+/* BOTÓN 4 */
+.b4 {
+  --trans-distance: .4em;
+  position: relative; /* Para el hijo after con pos absoluta */
+  transition: all .1s linear; /* Para los márgenes */
+}
+.b4:hover {
+  padding-left: calc(1em - var(--trans-distance)); /* Mueve el texto a la izda */
+  padding-right: calc(1em + var(--trans-distance)); /* Para que el botón mantenga el ancho */
+}
+.b4::after {
+  content: '\f054'; /* Icono de flecha abierta */
+  font-weight: 900;  /* Sólo funciona con este tamaño */
+  font-family: 'Font Awesome 5 Free';
+  display: inline-block;
+  width: var(--trans-distance);
+  opacity: 0;
+  position: absolute;
+  transition: all .1s linear;
+  
+  /* btn-hpadding - trans-distance es la distancia final
+     de right para que sea igual al padding izdo del texto. 
+     El .5em se lo añadimos para que la animación comience
+     desde algo más a la izda. */
+  right: calc(.5em + var(--btn-hpadding) - var(--trans-distance));
+}
+.b4:hover::after {
+  opacity: 1;
+  /* Posición final simétrica con el texto. */
+  right: calc(var(--btn-hpadding) - var(--trans-distance));
+}

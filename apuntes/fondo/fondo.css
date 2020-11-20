@@ -1,0 +1,17 @@
+body {
+    height: 300vh;
+    background: url(https://images.unsplash.com/photo-1546372934-52ab68952775?ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80);
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  .block {
+    width: 200px;
+    height: 50vh;
+    top: 50px;
+    border-radius: 10px;
+    background-color: purple;
+    position: fixed;
+  }
+  

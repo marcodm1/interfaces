@@ -1,0 +1,9 @@
+/* poner:
+
+nav a {
+    todos los a que desciendan de cualquier nav
+}
+
+nav > a {
+    todos los a que tengan un padre nav
+} */

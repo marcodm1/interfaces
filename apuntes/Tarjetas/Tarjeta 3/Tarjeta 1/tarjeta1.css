@@ -1,0 +1,81 @@
+/*
+Esta versión tiene varios cambios:
+- Utiliza una variable para el tamaño de los márgenes principales.
+- El marco blanco principal está puesto con un ::before
+*/
+:root {
+  box-sizing: border-box;
+  --mymargin: 10px;
+}
+* {
+  box-sizing: inherit;
+}
+body {
+  background-color: #e5eff1;
+  padding: 30px;
+}
+.card {
+  width: 400px;
+  background-color: white;
+  margin: auto;
+  position: relative;
+  padding: 10px;
+}
+.card::before {
+  background-color: #FFF;
+  content: "";
+  position: absolute;
+  display: block;
+  left: calc(-1 * var(--mymargin));
+  top: calc(-1 * var(--mymargin));
+  right: calc(-1 * var(--mymargin));
+  bottom: calc(-1 * var(--mymargin));
+  z-index: -1;
+}
+.card {
+  background: rgb(207,236,49);
+background: linear-gradient(180deg, rgba(147,236,49,1) 0%, rgba(7,226,150,1) 100%);
+}
+.card img {
+  width: 40%;
+  display: block;
+  margin: auto;
+  padding: 50px 0;
+}
+.card .person {
+  background-color: #465b6c;
+  position: relative;
+left: calc(-6 * var(--mymargin));
+width: calc(100% + 12 * var(--mymargin));
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  padding: .3em;
+}
+.card .person::before {
+  content: '';
+  position: relative;
+  display: block;
+  width: calc(100% - 20px);
+  height: calc(2 * var(--mymargin));
+  top: calc(-1.2 * var(--mymargin));
+  left: calc(1.2 * var(--mymargin));
+  width: calc(100% + -2.4 * var(--mymargin));
+  z-index: -2;
+  background-color: #335;
+}
+
+.card .social {
+  text-align: center;
+  padding: 20px;
+}
+.card .social img {
+  display: inline-block;
+  width: 30px;
+  opacity: 0.6;
+  margin: 0 5px;
+}
+.card .social a:hover {
+  position: relative;
+  top: -5px;
+}

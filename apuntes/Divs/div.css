@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .item {
+    height: 100px;
+    width: 100px;
+    /* flex: 0 0 100px; */ /* Alternativa */
+    /* flex-basis: 100px; */ /* Alternativa */
+    
+    background: tomato;
+    border: 1px solid black;
+    border-radius: 5px;
+  }

@@ -1,0 +1,192 @@
+<h1>Bootstrap Layout</h1>
+<p>Mira la <a href="https://getbootstrap.com/docs/4.4/layout/overview/">documentación oficial</a>. Esta página sirve como guía asumiendo que miras el código para ver cómo está hecha.</p>
+<p>La clase <code>container</code> deja espacios a los laterales, excepto si el viewport es pequeño. Prueba a cambiar el tamaño de tu ventana:</p>
+<div class="container">
+  <div class="row">
+    <div class="col bg-primary">Ola</div>
+    <div class="col bg-warning">ke</div>
+    <div class="col bg-success">ase</div>
+  </div>
+</div>
+
+<p>La clase <code>container-fluid</code> se ajusta siempre al borde del viewport (pero no debe estar dentro de otro <code>container</code>):</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col bg-primary">Ola</div>
+    <div class="col bg-warning">ke</div>
+    <div class="col bg-success">ase</div>
+  </div>
+</div>
+
+<p>Con Bootstrap 4, el ancho de cada columna se ajusta automáticamente. Prueba a poner o quitar columnas!</p>
+
+<h2>12 columns</h2>
+<p>Además de <code>col</code> para columnas de ancho automático, podemos ajustar diferentes tamaños de columna con el de 12 columnas.</p>
+<p>Usa el sistema <code>col-{size}</code> donde <code>{size}</code> es un número de 1 a 12.</p>
+<div class="container">
+  <div class="row">
+    <div class="col-2 bg-primary">col-2</div>
+    <div class="col-9 bg-warning">col-9</div>
+    <div class="col-1 bg-success">col-1</div>
+  </div>
+  <div class="row">
+    <div class="col bg-primary">col</div>
+    <div class="col-5 bg-warning">col-5</div>
+    <div class="col bg-success">col</div>
+  </div>
+  <div class="row">
+    <div class="col-6 bg-primary">col-6</div>
+    <div class="col-5 bg-warning">col-5</div>
+    <div class="col-2 bg-success">col-2 (salta row)</div>
+  </div>
+</div>
+
+<ul>
+  <li>Si las columnas suman 12, ocuparán toda la fila.</li>
+  <li>Si no suman doce, lo restante se reparte equitativamente entre las columnas sin ancho especificado, con <code>col</code>, si las hay.</li>
+  <li><strong>Si suman más de 12, habrá saltos (uno o los que correspondan) a la siguiente fila.</strong></li>
+  <li>No hay ningún problema por que una columna salte de fila y puedes usarlo a propósito, sólo debes saber que ocurre por un motivo.</li>
+</ul>
+
+
+
+<h3>Márgenes en columnas</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-2 bg-primary">col-2</div>
+    <div class="col-4 bg-warning">col-4</div>
+    <div class="col-4 bg-success">col-4</div>
+  </div>
+  <div class="row">
+    <div class="col-2 bg-primary ml-auto">ml-auto</div>
+    <div class="col-4 bg-warning">col-4</div>
+    <div class="col-4 bg-success">col-4</div>
+  </div>
+  <div class="row">
+    <div class="col-2 bg-primary mr-auto">mr-auto</div>
+    <div class="col-4 bg-warning">col-4</div>
+    <div class="col-4 bg-success">col-4</div>
+  </div>
+  <div class="row">
+    <div class="col-2 bg-primary mx-auto">mx-auto</div>
+    <div class="col-4 bg-warning">col-4</div>
+    <div class="col-4 bg-success">col-4</div>
+  </div>
+  <div class="row">
+    <div class="col-2 bg-primary">col-2</div>
+    <div class="col-4 bg-warning mr-auto">col-4 mr-auto</div>
+    <div class="col-4 bg-success">col-4</div>
+  </div>
+  <div class="row">
+    <div class="col-2 bg-primary mr-auto">mr-auto</div>
+    <div class="col-4 bg-warning mr-auto">mr-auto</div>
+    <div class="col-4 bg-success">col-4</div>
+  </div>
+</div>
+<ul>
+  <li>Si no suman 12 y no hay <code>col</code>, habrá un margen que por defecto está a la derecha.</li>
+  <li>El margen se puede ajustar en cualquier lugar con <code>ml-auto</code> (margen a la izquierda), <code>mr-auto</code> (margen a la derecha), y <code>mx-auto</code> (margen a ambos lados, centrado).</li>
+  <li>El márgen puede estar en cualquier columna.</li>
+  <li>Puede haber varios márgenes que se reparten el espacio total de márgen.</li>
+</ul>
+
+
+<h2>Responsive grid system</h2>
+<p>Bootstrap usa flexbox internamente y es responsivo (se adapta a las dimensiones del vispositivo/viewport).</p>
+
+<p><strong>Breakpoints:</strong> se definen 5 breakpoints con unos tamaños de píxeles con nombres. Los tienes en la <a href="https://getbootstrap.com/docs/4.4/layout/grid/#grid-options">tabla de Grid Options</a>: extra small, small, medium, large y extra large.</p>
+
+<p>Las columnas con <code>col</code> o <code>col-{size}</code> funcionan igual para cualquier tamaño de viewport.</p>
+<p>Las columnas con <code>col-{breakpoint}</code> o <code>col-{breakpoint}-{size}</code> van a ocupar:</p>
+<ul>
+  <li>su tamaño correspondiente (automático o <code>{size}</code>) <strong>si el viewport es menor que el breakpoint</strong>.</li>
+  <li><strong>una fila completa si el viewport es mayor o igual al breakpoint.</strong></li>
+</ul>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 bg-primary">col-md-3</div>
+    <div class="col-md bg-warning">col-md</div>
+    <div class="col-md-3 bg-success">col-md-3</div>
+  </div>
+</div>
+
+<p>Podemos mezclar tamaños diferentes de columna con varios breakpoints juntos. <br> El siguiente grid tiene 4 columnas en tamaño medium, y 2 en tamaño small:</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-3 bg-primary">col-sm-6 col-md-3</div>
+    <div class="col-sm-6 col-md-3 bg-warning">col-sm-6 col-md-3</div>
+    <div class="col-sm-6 col-md-3 bg-success">col-sm-6 col-md-3</div>
+    <div class="col-sm-6 col-md-3 bg-danger">col-sm-6 col-md-3</div>
+  </div>
+</div>
+
+<h1>Columnas y filas</h1>
+<h2>Forzar saltos de línea</h2>
+<p>Si usas muchas columnas en una fila, puedes forzar un salto de línea añadiendo una columna <code>w-100</code> (width 100%):</p>
+<div class="container">
+  <div class="row">
+    <div class="col bg-primary">col</div>
+    <div class="col bg-warning">col</div>
+    <div class="w-100"></div>
+    <div class="col-4 bg-primary">col-5</div>
+    <div class="col-6 bg-warning">col-7</div>
+    <div class="col-4 bg-success">col-4 (no cabe)</div>
+    <div class="w-100"></div>
+    <div class="col-3 bg-primary">col-3 (no lleg a 12)</div>
+    <div class="w-100 bg-warning"></div>
+    <div class="col bg-primary">col</div>
+  </div>
+</div>
+
+<h2>Columnas por fila</h2>
+<p>Con <code>row-cols-{size}</code> puedes definir un número concreto de columnas por fila de manera muy sencilla. Ojo: <em>sólo a partir de v4.4</em></p>
+<div class="container">
+  <div class="row row-cols-3">
+    <div class="col bg-primary">Column</div>
+    <div class="col bg-warning">Column</div>
+    <div class="col bg-success">Column</div>
+    <div class="col bg-danger">Column</div>
+  </div>
+</div>
+<p>También podrías crear varios <code>row</code> sin problema.</p>
+
+<h1>Personalizar con Sass</h1>
+<p>Muchos parámetros de la rejilla grid de Bootstrap son personalizables desde Sass para lo que necesites en proyecto. <a href="https://getbootstrap.com/docs/4.4/layout/grid/#customizing-the-grid">Ver aquí documentación</a>.</p>
+<p>Puedes modificar</p>
+<ul>
+  <li>Número de columnas: <code>$grid-columns: 12 !default;</code></li>
+  <li>Tamaños de los breakpoints.</li>
+</ul>
+
+
+<h1>Mucho más</h1>
+<p>La documentación oficial incluye muchas más cosas:</p>
+<ul>
+  <li>Alineación vertical y horizontal.</li>
+  <li>Anidación (nesting) de grids.</li>
+  <li>Márgenes.</li>
+  <li>Sass.</li>
+</ul>
+
+<hr>
+<h1>Margin y padding</h1>
+<p>Desde v4 hay clases para facilitarlo (<a href="https://getbootstrap.com/docs/4.4/utilities/spacing/#notation">ver documentación</a>):</p>
+<ul>
+  <li><code>m-3</code> añade un margin de tamaño 3 (según lo que Bootstrap defina como tamaño 1)</li>
+  <li><code>p-1</code> padding de tamaño 1</li>
+  <li><code>ml-3</code> margin left. Similar para right, top y bottom: <code>mr-3</code>, <code>mt-3</code> y <code>mb-3</code></li>
+  <li><code>mx-3</code> margen eje X (left, right)</li>
+  <li><code>my-3</code> margen eje Y (top, bottom)</li>
+  <li><code>mx-auto</code> margen left y right auto (centrado clásico)</li>
+</ul>
+<p>Y todas las combinaciones que se te ocurran...</p>
+
+<p>Todos los márgenes y paddings son responsive, así que puedes hacer:</p>
+<ul>
+  <li><code>mx-md-5</code> margen eje X de 5 para viewports medium o mayor.</li>
+  <li><code>pl-sm-1 pl-md-3</code> paddings diferentes para viewports small y medium</li>
+</ul>
+
+<p>Todos estas clases de margin y padding los puedes usar dentro de columnas para dejar espacios dentro (en este contexto el espaciado se llama <strong>gutter</strong>, pero es lo mismo).</p>
+<p>En un grid también puedes quitar todos los paddings con <code>no-gutter</code>.</p>

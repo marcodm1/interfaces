@@ -1,0 +1,110 @@
+.card {
+  --bgr-color: #ddd;
+  position: relative;
+  width: 300px;
+  margin: auto;
+  background-color: var(--bgr-color);
+  
+  /* Bordes */
+  border-radius: 5px;
+  overflow: hidden; /* Fuerza esquinas bordeadas a los hijos. */
+  border: 1px solid #bbb;
+  
+  box-shadow: 5px 5px 5px 0 #ccc;
+  
+  /* Texto */
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.card .info {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+  color: #333;
+}
+
+.card img.head {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover; /* Para que la imagen no se estire y mantenga proporciones */
+  clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+}
+.card img.face {
+  width: 100px;
+  height: 100px;
+  object-fit: cover; /* Para que la imagen no se estire y mantenga proporciones */
+  border-radius: 50%; /* Para que sea un círculo */
+  
+  /* El display por defecto en img es inline. 
+     Para centrar con margin:auto, pasamos a display:block. */
+  display: block;
+  margin: auto;
+  
+  margin-top: -75px;
+  position: relative; /* Para que se dibuje por encima */
+  border: 7px solid var(--bgr-color);
+}
+
+.card h1,
+.card p {
+  padding: 0 1em;
+}
+
+.card h1 {
+  font-size: 2em;
+  margin-bottom: .5em;
+}
+
+.card .job-title {
+  font-weight: 300; /* Grosor de la fuente */
+}
+
+/* Quitar margen al último de los párrafos
+   (el enlace no está como párrafo).
+   Esto unifica el espaciado arriba y abajo
+   de a.website */
+.card p:last-of-type {
+  margin-bottom: 0;
+}
+.card a.website {
+  display: inline-block;
+  margin: 1em;
+  padding: .5em 1em;
+  border: 3px solid hsl(210, 50%, 50%);
+  border-radius: 3em;
+  color: hsl(210, 50%, 50%);
+}
+.card a.website:hover {
+  background-color: hsl(210, 50%, 50%, 0.2);
+}
+.card a.website:active {
+  background-color: hsl(210, 50%, 50%, 0.5);
+}
+
+
+.card .links {
+  border-top: 1px solid hsl(30, 50%, 30%);
+  background-color: hsl(30, 50%, 50%);
+}
+.card .links a {
+  color: #222;
+}
+.card .links i:hover {
+  background-color: hsla(30, 50%, 45%);
+}
+.card .links i:active {
+  background-color: hsla(30, 50%, 30%);
+}
+.card .links i {
+  /* Pongo la fuente a tamaño fijo porque quiero que 
+  los iconos se comporten como imágenes y no dependan
+  del tamaño normal del texto */
+  font-size: 26px;
+  /* Calculo un camaño de margen para que los
+  iconos se repartan por toda la línea (hay 3 iconos) */
+  padding: 10px calc((33.33% - 26px) / 2);
+}

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous|Alatsi&display=swap');
+
+* {
+  box-sizing: inherit;
+}
+
+:root {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #abc;
+  padding: 20px;
+}
+
+.card {
+  background-color: #545d65;
+  position: relative;
+  width: 50vw;
+  margin: auto;
+  
+  --card1-padding: 20px;
+  padding: var(--card1-padding);
+
+  --color: #eee;
+  --alt-color: rgb(102, 0, 102);
+  color: var(--color);
+  font-family: 'Alatsi', sans-serif;
+}
+
+/* Sombra - Método 1 */
+.card::before {
+  content: '';
+  background-color: black;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: -1;
+}
+
+/* Sombra - Método 2 */
+/* Esto es más recomendable a todos los efectos.
+   Deja disponible ::before para otra cosa
+   y se entiende mejor.
+*/
+/*
+.card {
+  box-shadow: 10px 10px 0px 0px rgba(0,0,0,1);
+}
+*/
+
+/* Franja inferior de color */
+.card::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: var(--alt-color);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.card > header {
+  font-family: 'Righteous', sans-serif;
+  font-size: .8em;
+  padding-right: calc(30px + 1em);
+}
+
+.card > button.heart {
+  border: 2.5px solid var(--color);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  font-family: 'FontAwesome';
+  font-size: 15px;
+  position: absolute;
+  right: var(--card1-padding);
+  top: var(--card1-padding);
+  padding: 0;
+  background-color: rgba(1,1,1,0);
+  cursor: pointer;
+  color: var(--color);
+}
+
+.card > button.heart:hover {
+  border-color: var(--alt-color);
+  color: var(--alt-color);
+}
+
+.card > quote {
+  display: block; /* inline no usa padding */
+  padding: 3em 2em;
+  text-align: center;
+  min-height: 200px;
+}
+
+.card > quote::before,
+.card > quote::after {
+  font-family: 'FontAwesome';
+  font-size: 2em;
+  color: var(--alt-color);
+  position: relative;
+}
+
+.card > quote::before {
+  content: "\f10d";
+  right: .3em;
+}
+
+.card > quote::after {
+  content: "\f10e";
+  left: .3em;
+  vertical-align: text-top;
+}
+
+.card > .author > img {
+  width: 100px;
+  border: 5px solid var(--alt-color);
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.card > .author > h2 {
+  margin-top: .5em;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+/* Sea cual sea el último hijo, quitar el margin-bottom
+   para que sólo quede el padding de .card */
+.card :last-child {
+  margin-bottom: 0;
+}

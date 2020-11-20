@@ -1,0 +1,19 @@
+.bloque {
+    width: 80px;
+    height: 80px;
+    float: left;
+  }
+  .c1 {
+    background: tomato;
+  }
+  .c2 {
+    background: aqua;
+  }
+  .padre {
+    background-color: #7cd67c;
+  }
+  .clearfix::after {
+    content: "***clearfix***";
+    display: block;
+    clear: both;
+  }
