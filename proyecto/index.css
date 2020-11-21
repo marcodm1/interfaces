@@ -1,0 +1,63 @@
+html {
+    box-sizing: border-box;
+  }
+
+body {
+    margin: 0;
+    background-image: linear-gradient(260deg, #98b386 0%, #49806b 100%);
+}
+.principal {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+ul {
+      display: inline-block; width: 100%;
+}
+
+.primerMenu li{  
+    width: 16.7%;
+    float: left;
+    margin: 0;
+    padding:  0;
+}
+
+
+.tituloNombre, .primerMenu a, .segundoMenu a, .formulario {
+    color:white;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-decoration: none;
+    background:rgba(0,0,0,0.2);
+    padding:20px 5px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    transition:all 0.5s;
+}
+
+.primerMenu, .segundoMenu{
+    border:1px solid black;
+    list-style: none;
+    margin-bottom: 35px;
+    padding: 0;
+    display: flex;
+}
+
+a:hover {
+    background:rgba(0,0,0,0.5);
+}
+
+img {
+    width:50%;
+    
+  }
+  
+input {
+    width: 200px;
+
+}
