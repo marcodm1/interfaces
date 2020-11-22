@@ -1,22 +1,5 @@
-nav li {
-    display: inline-block;
-    position: relative;
-    background-color: #ccc;
-  }
-  
-  nav li a {
-    display: block;
-    padding: 10px;
-  }
-  
-  nav li:hover {
-    background-color: #aaa;
-  }
-  
+
   nav .dropdown > ul {
-    width: 100px;
-    padding: 0;
-    position: absolute;
     display: none;
   }
   

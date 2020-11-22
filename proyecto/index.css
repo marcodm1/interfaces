@@ -4,34 +4,36 @@ html {
 
 body {
     margin: 0;
-    background-image: linear-gradient(260deg, #98b386 0%, #49806b 100%);
+    background-image: linear-gradient(260deg, #b5b8a6 0%, #92f5cfde 100%);
 }
 .principal {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
+    max-width: 900px;
+    margin:    0 auto;
 }
 
 ul {
-      display: inline-block; width: 100%;
+      display: inline-block; 
+      width: 100%;
 }
 
-.primerMenu li{  
-    width: 16.7%;
-    float: left;
-    margin: 0;
-    padding:  0;
+.primerMenu li {  
+    width:   16.7%;
+    float:   left;
+    margin:  0;
+    padding: 0;
+}
+
+.segundoMenu li {  
+    width:   20%;
+    float:   left;
+    margin:  0;
+    padding: 0;
 }
 
 
-.tituloNombre, .primerMenu a, .segundoMenu a, .formulario {
+.tituloNombre, .primerMenu a, .segundoMenu a, .formulario  {
     color:white;
-    font-weight: 100;
-    letter-spacing: 2px;
-    text-decoration: none;
+    letter-spacing: 3px;
     background:rgba(0,0,0,0.2);
     padding:20px 5px;
     display: inline-block;
@@ -40,12 +42,12 @@ ul {
     transition:all 0.5s;
 }
 
-.primerMenu, .segundoMenu{
-    border:1px solid black;
+.primerMenu, .segundoMenu, .imagenes {
+    border:     1px solid black;
     list-style: none;
-    margin-bottom: 35px;
-    padding: 0;
-    display: flex;
+    padding:    0;
+    display:    flex;
+    margin: 0;
 }
 
 a:hover {
@@ -53,11 +55,68 @@ a:hover {
 }
 
 img {
-    width:50%;
-    
-  }
-  
+    width:40%;
+}
+
 input {
     width: 200px;
+}
+
+/* Todo sobre las img del medio */
+
+.redesSociales img {
+    max-width: 15%;
+}
+.imagenes {
+    max-width: 900px;
+    margin: 0;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background:rgba(0,0,0,0.1);
+    scroll-behavior: inherit;
 
 }
+.imagenes img{
+    max-width: 280px;
+
+}
+.tituloNombre {
+    margin-bottom: 10px;
+}
+
+/* Todo sobre los menus desplegables */
+ nav .miniMenu li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  li a {
+    display: block;
+    padding: 10px;
+  }
+  
+  nav .miniMenu > ul {
+    max-width: 120px;
+    padding: 0;
+    position: absolute;
+    display: none;
+  }
+  
+  .miniMenu:hover > ul {
+    display: grid;
+    background-color: rgb(135, 192, 164);
+  }
+
+  nav .miniMenu li {
+    width: 120px;
+    border-right:  1px solid black;
+    border-left:   1px solid black;
+    border-bottom: 1px solid black;
+    
+    padding:    0;
+    display:    flex;
+    margin: 0;
+  }
+
+   /* si baja de 650px el total cambiar formato */
