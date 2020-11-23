@@ -12,8 +12,8 @@ body {
 }
 
 ul {
-      display: inline-block; 
-      width: 100%;
+    display: inline-block; 
+    width:   100%;
 }
 
 .primerMenu li {  
@@ -31,15 +31,14 @@ ul {
 }
 
 
-.tituloNombre, .primerMenu a, .segundoMenu a, .formulario  {
-    color:white;
+.primerMenu a, .segundoMenu a, .formulario  {
     letter-spacing: 3px;
-    background:rgba(0,0,0,0.2);
-    padding:20px 5px;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    transition:all 0.5s;
+    background:   rgba(97, 84, 84, 0.2);
+    padding:       20px 5px;
+    display:       inline-block;
+    width:         100%;
+    text-align:    center;
+    transition:    all 0.5s;
 }
 
 .primerMenu, .segundoMenu, .imagenes {
@@ -47,7 +46,7 @@ ul {
     list-style: none;
     padding:    0;
     display:    flex;
-    margin: 0;
+    margin:     0;
 }
 
 a:hover {
@@ -68,26 +67,38 @@ input {
     max-width: 15%;
 }
 .imagenes {
-    max-width: 900px;
-    margin: 0;
-    display: inline-block;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background:rgba(0,0,0,0.1);
-    scroll-behavior: inherit;
+    max-width:        900px;
+    margin:           0;
+    display:          inline-block;
+    margin-top:       20px;
+    margin-bottom:    20px;
+    background:     rgba(0,0,0,0.1);
+    scroll-behavior:  inherit;
+    padding-left: 25px;
 
 }
-.imagenes img{
+/* las imagenes del medio */
+.imagenes img {
     max-width: 280px;
-
 }
+.imagenes > img:hover {
+    transform: scale(1.5);
+  }
+
 .tituloNombre {
-    margin-bottom: 10px;
+    letter-spacing: 4px;
+    background:   rgba(0,0,0,0.2);
+    padding:        20px 5px;
+    display:        inline-block;
+    width:          100%;
+    text-align:     center;
+    transition:     all 0.5s;
+    margin-bottom:  10px;
 }
 
 /* Todo sobre los menus desplegables */
  nav .miniMenu li {
-    display: inline-block;
+    display:  inline-block;
     position: relative;
   }
   
@@ -98,9 +109,9 @@ input {
   
   nav .miniMenu > ul {
     max-width: 120px;
-    padding: 0;
-    position: absolute;
-    display: none;
+    padding:   0;
+    position:  absolute;
+    display:   none;
   }
   
   .miniMenu:hover > ul {
@@ -108,15 +119,31 @@ input {
     background-color: rgb(135, 192, 164);
   }
 
+  
+
   nav .miniMenu li {
     width: 120px;
     border-right:  1px solid black;
     border-left:   1px solid black;
     border-bottom: 1px solid black;
     
-    padding:    0;
-    display:    flex;
-    margin: 0;
+    padding: 0;
+    display: flex;
+    margin:  0;
   }
 
-   /* si baja de 650px el total cambiar formato */
+
+  /* https://sgz.es/diw/t3/#18 para las media queries */
+    /* si baja de 650px el total cambiar formato,
+    @media (max-width: 600px) {
+        html { background: green; }
+    }
+    */
+
+
+
+    /* css-tricks.com/a-complete-guide-to-dark-mode-on-the-web */
+   /* hacer qeu se ponga soscuro con el dark 
+   @media (prefers-color-scheme: dark) {
+   }
+   */
