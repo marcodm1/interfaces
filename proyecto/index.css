@@ -30,18 +30,33 @@ ul {
     padding: 0;
 }
 
+.paginacion {
+    text-align:    center;
+    background:   rgba(97, 84, 84, 0.2);
+    display:       inline-block;
+    transition:    all 0.5s;
+}
 
-.primerMenu a, .segundoMenu a, .formulario  {
+.paginacion li {
+    width:   20%;
+    float:   left;
+    margin:  0;
+    padding: 0;
+    list-style: none;
+    
+}
+
+
+.perfil, .primerMenu a, .segundoMenu a, .formulario  {
     letter-spacing: 3px;
     background:   rgba(97, 84, 84, 0.2);
     padding:       20px 5px;
-    display:       inline-block;
     width:         100%;
     text-align:    center;
     transition:    all 0.5s;
 }
 
-.primerMenu, .segundoMenu, .imagenes {
+.paginacion, .primerMenu, .segundoMenu, .imagenes {
     border:     1px solid black;
     list-style: none;
     padding:    0;
@@ -61,7 +76,7 @@ input {
     width: 200px;
 }
 
-/* Todo sobre las img del medio */
+/* Todo sobre las img */
 
 .redesSociales img {
     max-width: 15%;
@@ -71,18 +86,18 @@ input {
     margin:           0;
     display:          inline-block;
     margin-top:       20px;
-    margin-bottom:    20px;
     background:     rgba(0,0,0,0.1);
     scroll-behavior:  inherit;
-    padding-left: 25px;
+    padding: 20px;
 
 }
 /* las imagenes del medio */
 .imagenes img {
     max-width: 280px;
+    padding:   20px;
 }
 .imagenes > img:hover {
-    transform: scale(1.5);
+    transform: scale(1.3);
   }
 
 .tituloNombre {
@@ -104,7 +119,6 @@ input {
   
   li a {
     display: block;
-    padding: 10px;
   }
   
   nav .miniMenu > ul {
