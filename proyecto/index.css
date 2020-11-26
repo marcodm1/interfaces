@@ -25,6 +25,10 @@ body {
     transition:     all 0.5s;
     /* pone que tiene margen de 8 abajo */
 }
+h1.tituloNombre{
+    margin: 0;
+}
+
 /* -------------siguiente apartado------------------ */
 
 .menu {
@@ -58,7 +62,7 @@ body {
 }
 
 .menu a:hover {
-    background:rgba(0,0,0,0.5);
+    background:rgba(0,0,0,0.3);
 }
 /* -------------siguiente apartado------------------ */
 
@@ -68,7 +72,7 @@ nav .submenu li {
 }
   
 nav .submenu > ul {
-    max-width: 120px;
+    max-width: 150px;
     padding:   0;
     position:  absolute;
     display:   none;
@@ -80,7 +84,7 @@ nav .submenu > ul {
 }
 
 nav .submenu li {
-    width: 120px;
+    width: 100%;
     border-right:  1px solid black;
     border-left:   1px solid black;
     border-bottom: 1px solid black;
@@ -106,15 +110,19 @@ img {
     max-width:        900px;
     margin:           0;
     display:          inline-block;
-    margin-top:       20px;
+    margin-top:       0px;
     background:     rgba(0,0,0,0.1);
     scroll-behavior:  inherit;
 
 }
 
 .imagenes img {
-    max-width: 280px;
-    padding:   20px;
+    max-width: 31%;
+    display: inline-block;
+    margin: 1%;
+    border-radius: 40px;
+    border:  1px solid black;
+    
 }
 .imagenes > img:hover {
     transform: scale(1.3);
@@ -122,25 +130,25 @@ img {
 /* -------------siguiente apartado------------------ */
 
 .paginacion {
+
     list-style: none;
     padding:    0;
     display:    flex;
     margin:     0;
-    /* pone que tiene margin top 20 */
+    
 }
 
 ul { 
     width:   100%;
 }
 
-/* ul li {
-    width: 25%;
-} */
+
 
 .paginacion ul {
     text-align: center;
     transition: all 0.5s;
     display:    inline-block;
+
 }
 
 .paginacion li {
@@ -148,19 +156,21 @@ ul {
     border: 2px;;
     border-right: 1px solid black;
     border-left:  1px solid black;
+    border-bottom:  1px solid black;
     width:   11%;
-    float:   left;
+    display: inline-block;
     margin:  0;
     list-style: none;
 }
 /* -------------siguiente apartado------------------ */
 .perfil {
-    border:  1px solid black;
+    border:     1px solid black;
     background: rgba(97, 84, 84, 0.2);
-    margin: 0;
-    padding:    0px;
+    margin:     0;
+    padding:    10px;
     width:      100%;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 input {
@@ -201,23 +211,29 @@ input {
 .redes a:hover {
     background:rgba(0,0,0,0.5);
 }
+
 /* -------------siguiente apartado------------------ */
 
 
-
-
-
-  /* https://sgz.es/diw/t3/#18 para las media queries */
-    /* si baja de 650px el total cambiar formato,
-    @media (max-width: 600px) {
-        html { background: green; }
-    }
-    */
-
-
-
-    /* css-tricks.com/a-complete-guide-to-dark-mode-on-the-web */
-   /* hacer qeu se ponga soscuro con el dark 
-   @media (prefers-color-scheme: dark) {
-   }
-   */
+.botones {
+    text-decoration: none;
+    margin: 10px;
+  }
+  
+  .boton1 {
+    border: 4px solid #4CAF50;
+  }
+  
+  .boton2 { 
+    border: 4px solid #008CBA;
+  }
+  
+  .boton3 {  
+    border: 4px solid #f44336;
+  }
+  
+  .boton4 {
+    border: 4px solid #c5c765;
+  }
+  
+  
