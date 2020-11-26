@@ -1,53 +1,43 @@
 html {
     box-sizing: border-box;
-  }
+}
+/* -------------siguiente apartado------------------ */
 
 body {
     margin: 0;
     background-image: linear-gradient(260deg, #b5b8a6 0%, #92f5cfde 100%);
 }
-.principal {
+/* -------------siguiente apartado------------------ */
+
+.div-total {
     max-width: 900px;
     margin:    0 auto;
 }
+/* -------------siguiente apartado------------------ */
 
-ul {
-    display: inline-block; 
-    width:   100%;
+.tituloNombre {
+    letter-spacing: 4px;
+    background:   rgba(0,0,0,0.2);
+    padding:        20px;
+    display:        inline-block;
+    width:          100%;
+    text-align:     center;
+    transition:     all 0.5s;
+    /* pone que tiene margen de 8 abajo */
+}
+/* -------------siguiente apartado------------------ */
+
+.menu {
+    border:        1px solid black;
+    list-style:    none;
+    padding:       0;
+    display:       flex;
+    margin-top:    20px;
+    margin-bottom: 20px;
+
 }
 
-.primerMenu li {  
-    width:   16.7%;
-    float:   left;
-    margin:  0;
-    padding: 0;
-}
-
-.segundoMenu li {  
-    width:   20%;
-    float:   left;
-    margin:  0;
-    padding: 0;
-}
-
-.paginacion {
-    text-align:    center;
-    background:   rgba(97, 84, 84, 0.2);
-    display:       inline-block;
-    transition:    all 0.5s;
-}
-
-.paginacion li {
-    width:   20%;
-    float:   left;
-    margin:  0;
-    padding: 0;
-    list-style: none;
-    
-}
-
-
-.perfil, .primerMenu a, .segundoMenu a, .formulario  {
+.menu a {
     letter-spacing: 3px;
     background:   rgba(97, 84, 84, 0.2);
     padding:       20px 5px;
@@ -56,7 +46,51 @@ ul {
     transition:    all 0.5s;
 }
 
-.paginacion, .primerMenu, .segundoMenu, .imagenes {
+.menu li {  
+    width:   16.7%;
+    float:   left;
+    margin:  0;
+    padding: 0;
+}
+
+.menu li a {
+    display: block;
+}
+
+.menu a:hover {
+    background:rgba(0,0,0,0.5);
+}
+/* -------------siguiente apartado------------------ */
+
+nav .submenu li {
+    display:  inline-block;
+    position: relative;
+}
+  
+nav .submenu > ul {
+    max-width: 120px;
+    padding:   0;
+    position:  absolute;
+    display:   none;
+}
+  
+.submenu:hover > ul {
+    display: grid;
+    background-color: rgb(135, 192, 164);
+}
+
+nav .submenu li {
+    width: 120px;
+    border-right:  1px solid black;
+    border-left:   1px solid black;
+    border-bottom: 1px solid black;
+    padding: 0;
+    display: flex;
+    margin:  0;
+}
+
+/* -------------siguiente apartado------------------ */
+.imagenes {
     border:     1px solid black;
     list-style: none;
     padding:    0;
@@ -64,23 +98,10 @@ ul {
     margin:     0;
 }
 
-a:hover {
-    background:rgba(0,0,0,0.5);
-}
-
 img {
     width:40%;
 }
 
-input {
-    width: 200px;
-}
-
-/* Todo sobre las img */
-
-.redesSociales img {
-    max-width: 15%;
-}
 .imagenes {
     max-width:        900px;
     margin:           0;
@@ -88,63 +109,102 @@ input {
     margin-top:       20px;
     background:     rgba(0,0,0,0.1);
     scroll-behavior:  inherit;
-    padding: 20px;
 
 }
-/* las imagenes del medio */
+
 .imagenes img {
     max-width: 280px;
     padding:   20px;
 }
 .imagenes > img:hover {
     transform: scale(1.3);
-  }
+}
+/* -------------siguiente apartado------------------ */
 
-.tituloNombre {
-    letter-spacing: 4px;
-    background:   rgba(0,0,0,0.2);
-    padding:        20px 5px;
-    display:        inline-block;
-    width:          100%;
-    text-align:     center;
-    transition:     all 0.5s;
-    margin-bottom:  10px;
+.paginacion {
+    list-style: none;
+    padding:    0;
+    display:    flex;
+    margin:     0;
+    /* pone que tiene margin top 20 */
 }
 
-/* Todo sobre los menus desplegables */
- nav .miniMenu li {
-    display:  inline-block;
-    position: relative;
-  }
-  
-  li a {
-    display: block;
-  }
-  
-  nav .miniMenu > ul {
-    max-width: 120px;
-    padding:   0;
-    position:  absolute;
-    display:   none;
-  }
-  
-  .miniMenu:hover > ul {
-    display: grid;
-    background-color: rgb(135, 192, 164);
-  }
+ul { 
+    width:   100%;
+}
 
-  
+/* ul li {
+    width: 25%;
+} */
 
-  nav .miniMenu li {
-    width: 120px;
-    border-right:  1px solid black;
-    border-left:   1px solid black;
-    border-bottom: 1px solid black;
-    
-    padding: 0;
-    display: flex;
+.paginacion ul {
+    text-align: center;
+    transition: all 0.5s;
+    display:    inline-block;
+}
+
+.paginacion li {
+    background: rgba(97, 84, 84, 0.2);
+    border: 2px;;
+    border-right: 1px solid black;
+    border-left:  1px solid black;
+    width:   11%;
+    float:   left;
     margin:  0;
-  }
+    list-style: none;
+}
+/* -------------siguiente apartado------------------ */
+.perfil {
+    border:  1px solid black;
+    background: rgba(97, 84, 84, 0.2);
+    margin: 0;
+    padding:    0px;
+    width:      100%;
+    text-align: center;
+}
+
+input {
+    width: 200px;
+}
+/* -------------siguiente apartado------------------ */
+.redes {
+    border:     1px solid black;
+    list-style: none;
+    padding:    0;
+    display:    flex;
+    margin:     0;
+}
+
+.redes li {  
+    width:   20%;
+    float:   left;
+    margin:  0;
+    padding: 0;
+}
+
+.redes a {
+    letter-spacing: 3px;
+    background:   rgba(97, 84, 84, 0.2);
+    padding:       20px 5px;
+    width:         100%;
+    text-align:    center;
+    transition:    all 0.5s;
+}
+
+.redesSociales img {
+    max-width: 15%;
+}
+
+ .redes li a {
+    display: block;
+}
+.redes a:hover {
+    background:rgba(0,0,0,0.5);
+}
+/* -------------siguiente apartado------------------ */
+
+
+
 
 
   /* https://sgz.es/diw/t3/#18 para las media queries */

@@ -9,15 +9,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="normalizacion.css">
 </head>
 <body>
-    <div class="principal">
+    <div class="div-total">
         <header class="top">
         <h1 class="tituloNombre">Mariana Olmedo</h1>
         </header>
+
         <nav>
-            <ul class="primerMenu">
-                <li class="miniMenu">
+            <ul class="menu">
+                <li class="submenu">
                     <a>Macrame</a>
                     <ul>
                         <li><a>Bolsos    </a></li>
@@ -27,7 +29,7 @@
                         <li><a>Decoracion</a></li>
                     </ul>
                 </li>
-                <li class="miniMenu">
+                <li class="submenu">
                     <a>Tartas</a>
                     <ul>
                         <li><a>Adultos   </a></li>
@@ -35,14 +37,14 @@
                         <li><a>Personales</a></li>
                     </ul>
                 </li>
-                <li class="miniMenu">
+                <li class="submenu">
                     <a>Fiesta</a>
                     <ul>
                         <li><a>Decoracion </a></li>
                         <li><a>Regalos    </a></li>
                     </ul>
                 </li>
-                <li class="miniMenu">
+                <li class="submenu">
                     <a>Videos</a>
                     <ul>
                         <li><a>Propios   </a></li>
@@ -50,7 +52,7 @@
                         <li><a>Con clientes </a></li>
                     </ul>
                 </li>
-                <li class="miniMenu">
+                <li class="submenu">
                     <a>Fotos</a>
                     <ul>
                         <li><a>Propias  </a></li>
@@ -58,7 +60,7 @@
                         <li><a>Con clientes</a></li>
                     </ul>
                 </li>
-                <li class="miniMenu">
+                <li class="submenu">
                     <a>Pedido</a>
                     <ul>
                         <li><a>Recogida  </a></li>
@@ -67,40 +69,41 @@
                 </li>
             </ul>
         </nav>
+
+        
+
+        <div class="imagenes">
+            <img src="/imagenes/iconoIMG.png">
+            <img src="/imagenes/iconoIMG.png">
+            <img src="/imagenes/iconoIMG.png">
+            <img src="/imagenes/iconoIMG.png">
+            <img src="/imagenes/iconoIMG.png">
+            <img src="/imagenes/iconoIMG.png">
+            <img src="/imagenes/iconoIMG.png">
+            <img src="/imagenes/iconoIMG.png">
+            <img src="/imagenes/iconoIMG.png">
+        </div>  
+            
+        <nav class="paginacion">
+            <ul>
+                <li class="anterior"><a href="#">← Anterior</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li class="siguiente"><a href="#">Siguiente →</a></li>
+            </ul>
+        </nav>
+
         <section class="perfil">
-            <form action="" class="perfil">
-              <input type="text" placeholder="Nombre">
-              <input type="email" placeholder="Email">
+            <form>
+              <input type="text"   placeholder="Nombre">
+              <input type="password"  placeholder="Contraseña">
               <input type="submit" value="Conectarse">
             </form>
         </section>
-            <div class="imagenes">
-                <img src="/imagenes/iconoIMG.png">
-                <img src="/imagenes/iconoIMG.png">
-                <img src="/imagenes/iconoIMG.png">
-                <img src="/imagenes/iconoIMG.png">
-                <img src="/imagenes/iconoIMG.png">
-                <img src="/imagenes/iconoIMG.png">
-                <img src="/imagenes/iconoIMG.png">
-                <img src="/imagenes/iconoIMG.png">
-                <img src="/imagenes/iconoIMG.png">
-                
-                
-            </div>  
-            
-            <section class="paginacion">
-                <ul>
-                    <li><a href="#">1º</a></li>
-                    <li><a href="#">←</a></li>
-                    <li><a href="#">x</a></li>
-                    <li><a href="#">→</a></li>
-                    <li><a href="#">final</a></li>
-                </ul>
-            </section>
-    
 
         <footer>
-            <ul class="segundoMenu">
+            <ul class="redes">
                 <li><a class="redesSociales">Facebook  <img src="/imagenes/f.png"></a></li>
                 <li><a class="redesSociales">Instagram <img src="/imagenes/instagram.png"></a></li>
                 <li><a class="redesSociales">Twitter   <img src="/imagenes/tww.png"></a></li>
@@ -109,6 +112,7 @@
             </ul>
         </footer>
 
+        
 
     </div>
 </body>
