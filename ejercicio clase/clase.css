@@ -1,0 +1,25 @@
+.principal {
+    max-width:  70%;
+    margin:     auto;
+}
+
+.principal > * {
+    background-color: grey;
+    padding: 10px;
+    margin:  10px;
+    flex:    1;
+    display: flex;   
+    /* sale error */
+}
+
+.hijo1 {
+    background-color: teal;
+}
+
+.hijo2 {
+    background-color: tomato;
+}
+
+.hijo3 {
+    background-color: yellowgreen;
+}
