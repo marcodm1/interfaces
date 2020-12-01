@@ -8,18 +8,45 @@
     padding: 10px;
     margin:  10px;
     flex:    1;
-    display: flex;   
+    display: flex;  
     /* sale error */
 }
 
-.hijo1 {
+.primero .hijo1 {  /* 0 0 70% = no permito que se agrande, permito que se enoja, y que ocupa el 70% del total */
     background-color: teal;
+    flex: 0 0 70%;
 }
-
-.hijo2 {
+.primero .hijo2 {
     background-color: tomato;
+    flex: 2 0 40%;
+}
+.primero .hijo3 {
+    background-color: yellowgreen;
+    flex: 1 0 10%;
 }
 
-.hijo3 {
+    .segundo .hijo1 {
+        background-color: teal;
+        flex: 0 0 10%;
+    }
+    .segundo .hijo2 {
+        background-color: tomato;
+        flex: 2 0 30%;
+    }
+    .segundo .hijo3 {
+        background-color: yellowgreen;
+        flex: 1 0 60%;
+    }
+
+.tercero .hijo1 {
+    background-color: teal;
+    flex: 0 0 10%;
+}
+.tercero .hijo2 {
+    background-color: tomato;
+    flex: 1 0 20%;
+}
+.tercero .hijo3 {
     background-color: yellowgreen;
+    flex: 1 0 30%;
 }
