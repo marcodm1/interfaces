@@ -1,0 +1,75 @@
+.medio {
+    flex:auto; 
+}
+
+.todo, .encabezado, .columnaDerecha, .columnaIzquierda, .main, .pie {
+    border: black 1px solid ;
+}
+
+.encabezado {
+    height: 100px;
+    flex: 0 0 200px;
+ /* basics */
+}
+
+.medio {
+    display: flex;
+}
+
+.encabezado, .pie {
+    background-color: #239B56;
+}
+
+.pie {
+    height: 100px;
+    flex: 0 0 200px;
+}
+
+.medio {
+    height: 600px;
+}
+
+
+.columnaIzquierda, .columnaDerecha {
+    background-color: #27AE60;
+    width: 150px;
+}
+
+.main {
+    background-image: url("/imagenes/dsdsds.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 1;
+    /* no consigoque se estire la img */
+}
+
+h2 {
+    
+}
+
+
+@media (max-width: 1000px) {
+    .medio {
+        flex-direction: column;
+    }
+
+    .main {
+        background-image: url("/imagenes/ggggg.jpg");
+    }
+
+    .columnaIzquierda, .columnaDerecha {
+        background-color: #A93226;
+        height: 100px;
+        width: 100%;
+    }
+
+    .encabezado, .pie {
+        background-color: #CD6155;
+    }
+
+}
+/* flex son 3, grow(permite crecer) shrim(permite encoger) y basics(ancho base) */
+
+/*  flex: 1 1 200px significa: grow sgrim y tamaño */
+
+/* repasar los grid con https://css-tricks.com/snippets/css/complete-guide-grid/ */
