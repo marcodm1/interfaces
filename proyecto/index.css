@@ -1,0 +1,499 @@
+:root {
+    --texto:      #222;
+    --background: #fff;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      --texto:      #eee;
+      --background: #121212;
+    }
+  }
+
+  
+body {
+    color:      var(--texto);
+    background: var(--background);
+  }
+  
+html {
+    box-sizing: border-box;
+}
+/* -------------siguiente apartado------------------ */
+
+body {
+    margin: 0;
+    background-image: linear-gradient(260deg, #b5b8a6 0%, #92f5cfde 100%);
+}
+/* -------------siguiente apartado------------------ */
+
+.div-total {
+    max-width: 900px;
+    margin:    0 auto;
+}
+/* -------------Genérico------------------ */
+
+.redes a:hover, .menu a:hover, .menuVertical a:hover, .paginacion li:hover {
+    background:rgba(0,0,0,0.3);
+}
+
+.central  img:hover, .top img:hover {
+    transform: scale(1.1);
+}
+
+.menu a, .central .menuV2 {
+    letter-spacing: 3px;
+    background:   rgba(97, 84, 84, 0.2);
+    padding:       20px 5px;
+    width:         100%;
+    text-align:    center;
+    transition:    all 0.5s;
+}
+
+/* -------------Header------------------ */
+
+.top {
+    
+    background:   rgba(0,0,0,0.2);
+    padding:        20px;
+    display:        inline-block;
+    width:          100%;
+    margin:         0px;
+    position:       relative;
+}
+
+.top .tituloNombre {
+    letter-spacing: 4px;
+    text-align:     center;
+}
+.login img {
+    opacity: 0.8;
+}
+.top .login {
+position: absolute;
+top:      0;
+right:    0;
+width:    100%;
+}
+.top .login img {
+    max-width:  3%;
+    float:      right;
+}
+
+
+/* -------------Menu principal------------------ */
+
+.menu {
+    border:        1px solid black;
+    list-style:    none;
+    padding:       0;
+    display:       flex;
+    margin-top:    20px;
+    margin-bottom: 20px;
+
+}
+
+.menu li {  
+    width:   16.7%;
+    float:   left;
+    margin:  0;
+    padding: 0;
+}
+
+.menu li a {
+    display: block;
+}
+  
+
+/* -------------Submenus------------------ */
+
+nav .submenu li {
+    display:  inline-block;
+    position: relative;
+}
+  
+nav .submenu > ul {
+    max-width:  150px;
+    padding:    0;
+    position:   absolute;
+    display:    none;
+    Z-INDEX:    1;
+}
+  
+.submenu:hover > ul {
+    display:            grid;
+    background-color: rgb(135, 192, 164);
+}
+
+nav .submenu li {
+    width:         100%;
+    border-right:  1px solid black;
+    border-left:   1px solid black;
+    border-bottom: 1px solid black;
+    padding:       0;
+    display:       flex;
+    margin:        0;
+}
+
+/* -------------Central------------------ */
+            /* ----IMG---- */
+.central {
+    max-width:    900px;
+    border:       1px solid black;
+    list-style:   none;
+    padding:      0px;
+    padding-left: 20px;
+    display:      flex;
+    margin:       0;
+    background: rgba(0,0,0,0.1);
+}
+
+.central img {
+    max-width:      22%;
+    display:        inline-block;
+    margin:         1%;
+    border-radius:  40px;
+    border:         1px solid black;
+    
+}
+
+            /* ----Menu vertical---- */
+
+.menuVertical {
+    border-left: 1px solid;
+    padding:     0;
+}
+
+.menuVertical ul li:first-child {
+    background:     rgba(0,0,0,0.2);
+    text-align:     center;
+    border-bottom:  1px solid;
+}
+
+.menuVertical ul li:last-child {
+    text-align:     center;
+    border-bottom:  1px solid;
+}
+
+.menuVertical ul{ 
+    padding: 0;
+}
+
+.menuVertical li {
+    list-style: none;
+}
+
+.menuVertical a {
+    list-style: none;
+    width:      100%;
+    display:    inline-block;
+}
+
+.menuVertical .menuV {
+    width: 100%;
+}
+
+
+/* -------------Paginación------------------ */
+
+.paginacion {
+    padding:    0;
+    display:    flex;
+    margin:     0;
+}
+
+ul { 
+    width:   100%;
+}
+
+.paginacion .pagActual {
+    background:rgba(0,0,0,0.3);
+}
+
+
+.paginacion ul {
+    text-align: center;
+    transition: all 0.5s;
+    display:    inline-block;
+    padding:    0;
+    margin-top: 6px;
+}
+.paginacion ul a { 
+    color: black;
+    display: inline-block; 
+    width:   100%;
+    text-decoration: none;
+}
+
+.paginacion li {
+    background: rgba(97, 84, 84, 0.2);
+    border: 2px;
+    border: 1px solid black;
+    width:   11%;
+    display: inline-block;
+    margin:  0;
+    list-style: none;
+}
+
+
+/* -------------Redes sociales------------------ */
+.redes {
+    border:     1px solid black;
+    list-style: none;
+    padding:    0;
+    display:    flex;
+    margin:     0;
+}
+
+.redes li {  
+    width:   20%;
+    float:   left;
+    margin:  0;
+    padding: 0;
+}
+
+.redes a {
+    letter-spacing: 3px;
+    background:   rgba(97, 84, 84, 0.2);
+    padding:       20px 5px;
+    width:         100%;
+    text-align:    center;
+    transition:    all 0.5s;
+}
+
+.redesSociales img {
+    max-width: 15%;
+}
+
+ .redes li a {
+    display: block;
+}
+
+
+/* -------------Pagina de favorito------------------ */
+/* -------------Pagina de favorito------------------ */
+.todoDiv {
+    margin-top: 20px;
+}
+
+ .reclamacionesIMG img {
+    border:         1px solid black;
+    max-width:      100%;
+}
+.reclamacionesIMG {
+    border-right:  0px;
+    padding-right: 0px;
+    border-right:  0px;
+}
+.reclamacionesGeneral {
+    padding-left: 100px;
+    padding-top: 25px;
+}
+.reclamaciones {
+    margin-top: 20px;
+    padding: 10px
+}
+
+/* -------------Pagina de contacto------------------ */
+/* -------------Pagina de contacto------------------ */
+.central {
+    margin-top: 20px;
+}
+
+/* -------------Pagina de producto------------------ */
+/* -------------Pagina de producto------------------ */
+
+
+.centralproducto {    
+    width: 100%;
+    margin-left: 0px;
+}
+.centralproducto .boton1 {
+    background-image: linear-gradient(260deg, #a1b37d 0%, #f5de92de 100%);
+    width: 100%;
+    margin-top: 15px;
+}
+
+.centralproducto .boton {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+.centralproducto .imagenesPequeñas .minimagen {
+    margin-top: 10px;
+}
+.centralproducto .grande {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.descripciones {
+    margin-top: 30px;
+}
+
+
+.card {
+    background-color: transparent;
+    border: none;
+}
+.columnas {
+    margin-top: 20px;
+}
+
+.columnas .nombrePrecios .corazon {
+    margin-top: 12px;
+    width: 20px;
+}
+
+.columnas .nombrePrecios .nomPre2 {
+    padding-top: 10px;
+    width: 20px;
+}
+.nombrePrecios .nomPre1 {
+    text-align: center;
+}
+
+
+/* -------------Media query------------------ */
+
+@media (max-width: 1024px) {
+    body { 
+        font-size: 14px;
+    }
+    .div-total {
+        max-width: 600px;
+    }
+    .div-total nav { 
+        display: inline-block; 
+        width:   100%; 
+    }
+    .div-total nav.menuprincipal{ 
+        width:   20%; 
+        float: left;
+    }
+    
+    .central {
+        margin-left:  0px;
+    }
+    .central img {
+        max-width: 46%;
+    }
+   
+    
+    .menuVertical {
+        display: none;
+    }
+    .central {
+        display:     inline-block; 
+        width:       78%; 
+        margin-left: 1%;
+    }
+    .central .contact{
+        width: 100%; 
+        margin: 0;
+    }
+    .paginacion {
+        display: flex; 
+        width:   100%;
+    }
+    .menu {
+        display:    inline-block; 
+        margin-top: 0;
+    }
+    .menu li {
+        float:      none; 
+        display:    inline-block; 
+        width:      100%; 
+        position:   relative;
+    }
+
+    nav .submenu > ul {
+        top:    0;
+        right:  0%;
+        border: 1px solid black;
+    }
+    .paginacion ul {
+        width:       80%;
+        margin-left: 10%;
+    }
+    .paginacion li{
+        width: 15%;
+    }
+
+    .redesSociales img { 
+        display: none;
+    }
+
+.centralproducto{    margin-bottom: 10px;}
+
+}
+
+
+
+
+@media (max-width:650px) {
+
+    .central img {
+        max-width: 46%;
+    }
+    .paginacion li {
+        width:      18% ; 
+        margin-top: 10px;
+    }
+    .hidden{
+        display: none !important;
+    }
+    .redesSociales img { 
+        display: block;
+    }
+    .redesSociales span { 
+        display: none;
+    }
+    .redesSociales img {
+        max-width: 50%;
+        margin: 25%;
+    }
+    .redes a{padding: 0; background: none;}
+    .paginacion ul {
+        width: 100%;
+    }
+
+    .redes li:first-child .redesSociales img {
+        width: 78%;
+        max-width: initial;
+        margin-top: 10%;
+    }
+    .centralproducto .imagenesPequeñas .minimagen {
+        display: none;
+    }
+}
+@media (max-width:570px) {
+    .div-total {
+        max-width: 400px;
+        font-size: 10px;
+    }
+
+    .tituloNombre h1 {
+        /* display: none; */
+        font-size: 20px;
+        /* ponerlo en un a linea y letra mas pequeña */
+    }
+
+    .central img {
+        max-width: 45%;
+    }
+
+    .paginacion li {
+        width:      18% ; 
+        margin-top: 5px;
+        /* quotar el 2 y el 3 */
+    }
+    .redes a {
+        /* poner solo los iconos */
+    }
+
+ 
+
+}
+
+ 
